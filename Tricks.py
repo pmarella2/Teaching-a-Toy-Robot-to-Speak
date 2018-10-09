@@ -6,7 +6,7 @@
 #then it goes to a specified cube
 #picks it up
 #stacks it on top of a second defined cube
-#then looks for third cube
+#then looks for the third cube
 #goes to the third cube
 #then it pops a wheelie using its lift and cube
 #drives backwards to get back into normal position
