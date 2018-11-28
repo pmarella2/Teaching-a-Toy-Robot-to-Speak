@@ -6,7 +6,7 @@
 #then it goes to a specified cube
 #picks it up
 #stacks it on top of a second defined cube
-#then looks for the third cube
+#then looks for third cube
 #goes to the third cube
 #then it pops a wheelie using its lift and cube
 #drives backwards to get back into normal position
@@ -28,7 +28,7 @@ async def cozmo_program(robot: cozmo.robot.Robot):
 
     #(assuming starting point is the charger) moves off the charger then turns towards cubes
     await robot.drive_straight(distance_mm(100), speed_mmps(250)).wait_for_completed()
-    await robot.turn_in_place(degrees(-45)).wait_for_completed()
+    await robot.turn_in_place(degrees(45)).wait_for_completed()
 
     #searches for three cubes for 10 seconds
     search_cubes = robot.start_behavior(cozmo.behavior.BehaviorTypes.LookAroundInPlace)
@@ -100,5 +100,5 @@ async def cozmo_program(robot: cozmo.robot.Robot):
     #disconnects all three cubes
     robot.world.disconnect_from_cubes()
 
-#opens a camera view and 3-d vector nav map of what cosmo sees
+#cozmo.robot.Robot.drive_off_charger_on_connect = False
 cozmo.run_program(cozmo_program, use_3d_viewer=True, use_viewer=True)
