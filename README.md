@@ -37,11 +37,5 @@ cd CozmoCode
 python3 {program.py}
 ```
 
-### **Interacting with the voting DApp**:
-1. You can now interact with the DApp by navigating to *localhost:8080* in your choice of browser
-
 ## **Troubleshooting:**
-Open an issue if there are any problems with compiling and running the DApp
-
-## **Acknowledgements:**
-I want to thank NSF and the ISPM research lab for providing the grant and resources to conduct this research project. I would also like to extend my thanks to Mahesh Murthy and Truffle team for providing the structure/tools for smart contract and web DApp development.
+Open an issue if there are any problems with compiling and running the code
