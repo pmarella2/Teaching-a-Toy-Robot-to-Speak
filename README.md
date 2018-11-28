@@ -1,63 +1,40 @@
-# BroncoVotes: Secure Voting System using Ethereum's Blockchain
+# Teaching a robot to speak
 ## **Description:**
-Voting is a fundamental part of democratic systems; it gives individuals in a community the faculty to voice
-their opinion. In recent years, voter turnout has diminished while concerns regarding integrity, security, and
-accessibility of current voting systems have escalated. E-voting was introduced to address those concerns;
-however, it is not cost-effective and still requires full supervision by a central authority. The blockchain is an
-emerging, decentralized, and distributed technology that promises to enhance different aspects of many industries.
-Expanding e-voting into blockchain technology could be the solution to alleviate the present concerns in
-e-voting. In this paper, we propose a blockchain-based voting system, named BroncoVote, that preserves voter
-privacy and increases accessibility, while keeping the voting system transparent, secure, and cost-effective.
-BroncoVote implements a university-scaled voting framework that utilizes Ethereum’s blockchain and smart
-contracts to achieve voter administration and auditable voting records. In addition, BroncoVote utilizes a few
-cryptographic techniques, including homomorphic encryption, to promote voter privacy. Our implementation
-was deployed on Ethereum’s Testnet to demonstrate usability, scalability, and efficiency.
+The goal of this project is to teach robots how to learn and speak simple words. We will use the Anki Cozmo robot as a platform. Cozmo has a Python SDK, which can be used to track the robot's internal state. The project will involve finding a way to "link" that internal state of the robot--what it perceives and experiences--to words that are uttered about the environment. For example, if the robot sees a red mug and someone says "that's a red mug" the robot should learn something about what "red" and what "mug" means.
 
-## **Requirements for compiling and interacting with the Voting DApp:**
+## **Requirements for compiling and running Cozmo code:**
 
 ### **Operating System**:
 Ubuntu 16.xx or higher (make sure to update your OS)
+or
+Windows
 
 ### **Packages**: 
+Ubuntu:
 1. Open a terminal (make sure you have permissions to download and install packages)
-2. Run these commands to install git, nodejs, npm, and truffle framework
+2. Go to the directory you want to download the repo into:
 ```bash
-sudo apt-get install git
-sudo apt install nodejs
-sudo apt-get install npm
-sudo apt-get install build-essential
-sudo npm install -g truffle
+git clone https://github.com/pmarella2/Teaching-a-Toy-Robot-to-Speak.git CozmoCode
+```
+3. Run this command in terminal to download the requirements for compiling the code:
+```bash
+./req.sh
 ```
 
-### **The voting DApp itself**:
-Go to the directory you want to download the app into:
-```bash
-git clone https://github.com/pmarella2/BroncoVotes.git BroncoVotes
-```
-*Alternatively you can click [here](https://github.com/pmarella2/BroncoVotes/archive/master.zip)*
+Windows:
+1. Follow instructions at: http://cozmosdk.anki.com/docs/install-windows.html
+2. Download freeglut.dll from: http://freeglut.sourceforge.net/ and place it in the directory with CozmoCode
 
-### **Steps to compile and host the voting DApp**:
-1. Change into BroncoVotes directory
+### **Steps to compile and run the code on Cozmo**:
+1. Connect your mobile device to your computer
+2. Change into CozmoCode directory
 ```bash
-cd BroncoVotes
+cd CozmoCode
 ```
-2. Open two new terminals in the project directory (so you should have three different terminals in the BroncoVotes directory)
-3. In terminal 3, run the nodejs component of BroncoVotes
+3. Open a terminal
+4. In terminal, run this command to compile and run a program on Cozmo
 ```bash
-cd app/javascripts
-node node.js
-```
-4. In terminal 2, run the virtual memory blockchain (testrpc/ganache-cli)
-```bash
-./node_modules/.bin/ganache-cli
-```
-5. In terminal 1, we will compile the voting smart contracts and deploy them onto the virtual memory blockchain
-```bash
-truffle migrate
-```
-6. In terminal 1 again, we will host the voting DApp
- ```bash
-npm run dev
+python3 {program.py}
 ```
 
 ### **Interacting with the voting DApp**:
